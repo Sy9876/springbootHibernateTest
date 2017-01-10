@@ -1,11 +1,36 @@
 package cn.sy.dto;
 
-public class Driver {
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="md_driver")
+public class Driver implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7038745485303872464L;
+
+	@Id
 	private String id;
+	
+	@Column
 	private String name;
+	
+	@Column(name="licence_no")
 	private String company;
+	
+	@Column(name="contact")
 	private String phoneNo;
+	
+	@Column
 	private String status;
+	
+	@Column(name="home_address")
 	private String passwd;
 	
 	public Driver() {

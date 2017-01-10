@@ -3,13 +3,13 @@ package cn.sy.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import cn.sy.dto.Driver;
-import cn.sy.service.dao.DriverDao;
+import cn.sy.service.dao.DriverRepository;
 
 @Service
 public class DriverService {
 
 	@Autowired
-	private DriverDao driverDao;
+	private DriverRepository driverRepository;
 
     public Driver getDriver(String phoneNo) {
     	
@@ -17,7 +17,7 @@ public class DriverService {
     	
     	System.out.println("DriverService getDriver start. phoneNo=" + phoneNo);
     	try {
-    		d=driverDao.findByPhoneNo(phoneNo);
+    		d=driverRepository.findByPhoneNo(phoneNo);
     		//System.out.println(d);
 		} catch (Exception e) {
 			e.printStackTrace();
