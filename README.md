@@ -1,9 +1,9 @@
-# springbootTest
+# springbootHibernateTest
 ## Introduction
-spring boot(1.4.1) 样例工程。包含以下功能样例：  
+spring boot(1.4.3) 样例工程。包含以下功能样例：  
 * RESTController  
 * AOP  
-* Mybatis(c3p0连接池)  
+* Hibernate  
 
 
 ## run
